@@ -22,9 +22,9 @@ kraken --version
 ## Dataset
 
 Training was performed using the data in:
-- lectaurep-bronod v0.0.1 (https://github.com/HTR-United/lectaurep-bronod/releases/tag/v0.0.1)
-- lectaurep-mariages-et-divorces v.1.0 (https://github.com/HTR-United/lectaurep-mariages-et-divorces/releases/tag/v1.0)
-- lectaurep-repertoires v2.0 (https://github.com/HTR-United/lectaurep-repertoires/releases/tag/v2.0)
+- [lectaurep-bronod v0.0.1](https://github.com/HTR-United/lectaurep-bronod/releases/tag/v0.0.1)
+- [lectaurep-mariages-et-divorces v.1.0](https://github.com/HTR-United/lectaurep-mariages-et-divorces/releases/tag/v1.0)
+- [lectaurep-repertoires v2.0](https://github.com/HTR-United/lectaurep-repertoires/releases/tag/v2.0)
 
 ### Test
 12 pages were randomly selected from the datasets to create a test set. 
