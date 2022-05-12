@@ -127,7 +127,7 @@ Moving best model lectaurep_base_17.mlmodel (0.9090173840522766) to lectaurep_ba
 $ ketos test -m lectaurep_base_best.mlmodel -e test.list -f xml -u NFD -d cuda:1
 ```
 
-Pour plus de lisibilité, les erreurs détectées sont aussi présentée dans [confusion_matrix_on_test.csv](https://github.com/lectaurep/lectaurep_base_model/blob/master/confusion_matrix_on_test.csv) sous la forme d'une matrice de confusion.
+Pour plus de lisibilité, les erreurs détectées sont aussi présentées dans [confusion_matrix_on_test.csv](https://github.com/lectaurep/lectaurep_base_model/blob/master/confusion_matrix_on_test.csv) sous la forme d'une matrice de confusion.
 
 ```
 WARNING:root:scikit-learn version 1.0.2 is not supported. Minimum required version: 0.17. Maximum required version: 0.19.2. Disabling scikit-learn conversion API.
