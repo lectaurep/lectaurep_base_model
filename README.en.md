@@ -2,6 +2,7 @@
 
 This model, "lectaurep_base", was produced using all the ground truth data published at the end of the LECTAUREP project.
 
+## Overview 
 
 | Script | Language | Period    | Score sur Dev | Score du Test (in-domain) |
 | :----: | :------: | :-------: | :-----------: | :-----------------------: |
@@ -12,21 +13,22 @@ List of characters known by the model:
 " % & ' ( ) + , - . / 0 1 2 3 4 5 6 7 8 9 : ; = ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ ] ^ _ ` a b c d e f g h i j k l m n o p q r s t u v w x y z | ~ ¥ ¨ ° ½ æ œ ȼ ̀ ́ ̂ ̃ ̈ ̧ € ↑ ∟
 ```
 
-## Kraken version
+## Details
+### Kraken version
 
 ```
 kraken --version
 >>> kraken, version 4.1.0
 ```
 
-## Dataset
+### Dataset
 
 Training was performed using the data in:
 - [lectaurep-bronod v0.0.1](https://github.com/HTR-United/lectaurep-bronod/releases/tag/v0.0.1)
 - [lectaurep-mariages-et-divorces v.1.0](https://github.com/HTR-United/lectaurep-mariages-et-divorces/releases/tag/v1.0)
 - [lectaurep-repertoires v2.0](https://github.com/HTR-United/lectaurep-repertoires/releases/tag/v2.0)
 
-### Test
+#### Test
 12 pages were randomly selected from the datasets to create a test set. 
 
 ```
@@ -44,7 +46,7 @@ Training was performed using the data in:
 - FRAN_0187_16411_L-0.xml
 ```
 
-## Hyper paramètres
+### Hyper paramètres
 
 The model was trained with the following command: 
 
@@ -52,7 +54,7 @@ The model was trained with the following command:
 ketos train -o lectaurep_base -f binary train.arrow --device cuda:1 --augment -u NFD -s '[1,120,0,1 Cr3,13,32 Do0.1,2 Mp2,2 Cr3,13,32 Do0.1,2 Mp2,2 Cr3,9,64 Do0.1,2 Mp2,2 Cr3,9,64 Do0.1,2 S1(1x0)1,3 Lbx200 Do0.1,2 Lbx200 Do.1,2 Lbx200 Do]' -r 0.0001
 ```
 
-## Training report
+### Training report
 
 ```
 WARNING:root:scikit-learn version 1.0.2 is not supported. Minimum required version: 0.17. Maximum required version: 0.19.2. Disabling scikit-learn conversion API.
@@ -118,11 +120,13 @@ stage 22/∞ ━━━━━━━━━━━━━━━━━━━━━━�
 Moving best model lectaurep_base_17.mlmodel (0.9090173840522766) to lectaurep_base_best.mlmodel
 ```
 
-## Testing lectaurep_base_best on the test set (in-domain)
+### Testing lectaurep_base_best on the test set (in-domain)
 
 ```
 $ ketos test -m lectaurep_base_best.mlmodel -e test.list -f xml -u NFD -d cuda:1
 ```
+
+For better readability, the errors detected during the test are also displayed as a confusion matrix in (confusion_matrix_on_test.csv)[https://github.com/lectaurep/lectaurep_base_model/blob/master/confusion_matrix_on_test.csv]
 
 ```
 WARNING:root:scikit-learn version 1.0.2 is not supported. Minimum required version: 0.17. Maximum required version: 0.19.2. Disabling scikit-learn conversion API.
