@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6542744.svg)](https://doi.org/10.5281/zenodo.6542744)
+
 # Modèle LECTAUREP base
 
 Ce modèle "lectaurep_base" est produit à partir de l'ensemble des données publiées à l'issue du projet LECTAUREP.
